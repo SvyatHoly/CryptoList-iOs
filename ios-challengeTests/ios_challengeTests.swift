@@ -6,30 +6,49 @@
 //
 
 import XCTest
+import Combine
+@testable import ios_challenge
+
+class MockTransactionsStateOwner: TransactionsStateOwner {
+    let output = CurrentValueSubject<TransactionsStateOutput?, Never>(nil)
+    let input = CurrentValueSubject<TransactionsStateAction?, Never>(nil)
+}
 
 final class ios_challengeTests: XCTestCase {
+    var service: TransactionsService!
+     var stateOwner: MockTransactionsStateOwner!
+     var cancellables: Set<AnyCancellable>!
+     
+     override func setUp() {
+         super.setUp()
+         stateOwner = MockTransactionsStateOwner()
+         service = TransactionsService(transactionsState: stateOwner)
+         cancellables = []
+     }
+     
+     override func tearDown() {
+         service = nil
+         stateOwner = nil
+         cancellables = nil
+         super.tearDown()
+     }
+     
+     func testTotalPriceUsdCalculation() {
+         let expect = expectation(description: "Total price USD updated")
+         
+         stateOwner.output
+             .throttle(for: 0.1, scheduler: RunLoop.main, latest: true)
+             .sink { output in
+             if let output = output {
+                 XCTAssertEqual(output.totalPriceUsd, 555.0, "Total price USD calculation is incorrect.")
+                 expect.fulfill()
+             }
+         }.store(in: &cancellables)
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
-}
+         stateOwner.input.send(.purchase(amount: 10, currency: CryptoCurrency(id: "btc", rank: "nil", symbol: "BTC", name: "Bitcoin", supply: nil, maxSupply: nil, marketCapUsd: nil, volumeUsd24Hr: nil, priceUsd: 50.0, changePercent24Hr: nil, vwap24Hr: nil, explorer: .init(string: ""))))
+         stateOwner.input.send(.purchase(amount: 1.1, currency: CryptoCurrency(id: "btc", rank: "nil", symbol: "BTC", name: "Bitcoin", supply: nil, maxSupply: nil, marketCapUsd: nil, volumeUsd24Hr: nil, priceUsd: 50.0, changePercent24Hr: nil, vwap24Hr: nil, explorer: .init(string: ""))))
+         
+         waitForExpectations(timeout: 1.0)
+     }
+ }

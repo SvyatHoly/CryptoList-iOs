@@ -8,13 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		06CF183F2BC68C4D00AB9081 /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF183E2BC68C4D00AB9081 /* iOSApp.swift */; };
-		06CF18412BC68C4D00AB9081 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF18402BC68C4D00AB9081 /* ContentView.swift */; };
+		06CF18412BC68C4D00AB9081 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF18402BC68C4D00AB9081 /* MainTabView.swift */; };
 		06CF18432BC68C4E00AB9081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CF18422BC68C4E00AB9081 /* Assets.xcassets */; };
 		06CF18472BC68C4E00AB9081 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CF18462BC68C4E00AB9081 /* Preview Assets.xcassets */; };
 		06CF18512BC68C4E00AB9081 /* ios_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF18502BC68C4E00AB9081 /* ios_challengeTests.swift */; };
 		06CF185B2BC68C4E00AB9081 /* ios_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF185A2BC68C4E00AB9081 /* ios_challengeUITests.swift */; };
 		06CF185D2BC68C4E00AB9081 /* ios_challengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF185C2BC68C4E00AB9081 /* ios_challengeUITestsLaunchTests.swift */; };
-		06CF18702BC68CB200AB9081 /* MainSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF186F2BC68CB200AB9081 /* MainSceneView.swift */; };
+		AA026B7A2BC7E8720081C7F3 /* TransactionsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026B792BC7E8720081C7F3 /* TransactionsState.swift */; };
+		AA026B7D2BC7E9BE0081C7F3 /* Combine+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026B7C2BC7E9BE0081C7F3 /* Combine+Additions.swift */; };
+		AA026B7F2BC7EAD50081C7F3 /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026B7E2BC7EAD50081C7F3 /* TransactionsService.swift */; };
+		AA026B822BC9314A0081C7F3 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026B812BC9314A0081C7F3 /* TransactionsView.swift */; };
+		AA026B842BC931530081C7F3 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026B832BC931530081C7F3 /* TransactionsViewModel.swift */; };
+		AA026B8A2BC938F20081C7F3 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AA026B892BC938F20081C7F3 /* Swinject-Dynamic */; };
+		AA026B8D2BC939440081C7F3 /* SwinjectAutoregistration-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AA026B8C2BC939440081C7F3 /* SwinjectAutoregistration-Dynamic */; };
+		AA026B902BC939C20081C7F3 /* Container+RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026B8F2BC939C20081C7F3 /* Container+RegisterDependencies.swift */; };
+		AA026B922BC939E10081C7F3 /* Container+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026B912BC939E10081C7F3 /* Container+Services.swift */; };
+		AA026B942BC93A410081C7F3 /* Container+ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026B932BC93A410081C7F3 /* Container+ViewModels.swift */; };
+		AA026B962BC93AB20081C7F3 /* Container+States.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026B952BC93AB20081C7F3 /* Container+States.swift */; };
+		AA89443E2BC69DA9008F5C78 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA89443D2BC69DA9008F5C78 /* Models.swift */; };
+		AA8944412BC69DDB008F5C78 /* CoincapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8944402BC69DDB008F5C78 /* CoincapService.swift */; };
+		AA89444A2BC69F8B008F5C78 /* CryptoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8944492BC69F8B008F5C78 /* CryptoListViewModel.swift */; };
+		AA89444C2BC69FFC008F5C78 /* CryptoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA89444B2BC69FFC008F5C78 /* CryptoListView.swift */; };
+		AA89444F2BC6A02D008F5C78 /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA89444E2BC6A02D008F5C78 /* PurchaseViewModel.swift */; };
+		AA8944512BC6A038008F5C78 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8944502BC6A038008F5C78 /* PurchaseView.swift */; };
+		AA89445B2BC6A44D008F5C78 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AA89445A2BC6A44D008F5C78 /* AlamofireDynamic */; };
+		AA89445C2BC6A44D008F5C78 /* AlamofireDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = AA89445A2BC6A44D008F5C78 /* AlamofireDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +52,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AA89445D2BC6A44D008F5C78 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AA89445C2BC6A44D008F5C78 /* AlamofireDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		06CF183B2BC68C4D00AB9081 /* ios-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CF183E2BC68C4D00AB9081 /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
-		06CF18402BC68C4D00AB9081 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		06CF18402BC68C4D00AB9081 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		06CF18422BC68C4E00AB9081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06CF18442BC68C4E00AB9081 /* ios_challenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ios_challenge.entitlements; sourceTree = "<group>"; };
 		06CF18462BC68C4E00AB9081 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -46,7 +78,21 @@
 		06CF18562BC68C4E00AB9081 /* ios-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CF185A2BC68C4E00AB9081 /* ios_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_challengeUITests.swift; sourceTree = "<group>"; };
 		06CF185C2BC68C4E00AB9081 /* ios_challengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_challengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		06CF186F2BC68CB200AB9081 /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
+		AA026B792BC7E8720081C7F3 /* TransactionsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsState.swift; sourceTree = "<group>"; };
+		AA026B7C2BC7E9BE0081C7F3 /* Combine+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Additions.swift"; sourceTree = "<group>"; };
+		AA026B7E2BC7EAD50081C7F3 /* TransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
+		AA026B812BC9314A0081C7F3 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		AA026B832BC931530081C7F3 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		AA026B8F2BC939C20081C7F3 /* Container+RegisterDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+RegisterDependencies.swift"; sourceTree = "<group>"; };
+		AA026B912BC939E10081C7F3 /* Container+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Services.swift"; sourceTree = "<group>"; };
+		AA026B932BC93A410081C7F3 /* Container+ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+ViewModels.swift"; sourceTree = "<group>"; };
+		AA026B952BC93AB20081C7F3 /* Container+States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+States.swift"; sourceTree = "<group>"; };
+		AA89443D2BC69DA9008F5C78 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		AA8944402BC69DDB008F5C78 /* CoincapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoincapService.swift; sourceTree = "<group>"; };
+		AA8944492BC69F8B008F5C78 /* CryptoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModel.swift; sourceTree = "<group>"; };
+		AA89444B2BC69FFC008F5C78 /* CryptoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListView.swift; sourceTree = "<group>"; };
+		AA89444E2BC6A02D008F5C78 /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
+		AA8944502BC6A038008F5C78 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +100,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA89445B2BC6A44D008F5C78 /* AlamofireDynamic in Frameworks */,
+				AA026B8D2BC939440081C7F3 /* SwinjectAutoregistration-Dynamic in Frameworks */,
+				AA026B8A2BC938F20081C7F3 /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +130,7 @@
 				06CF184F2BC68C4E00AB9081 /* ios-challengeTests */,
 				06CF18592BC68C4E00AB9081 /* ios-challengeUITests */,
 				06CF183C2BC68C4D00AB9081 /* Products */,
+				AA8944572BC6A386008F5C78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,8 +182,12 @@
 		06CF18692BC68C5E00AB9081 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				06CF18712BC68CD800AB9081 /* core */,
-				06CF186B2BC68C8000AB9081 /* ui */,
+				AA026B8E2BC939840081C7F3 /* dependencyInjection */,
+				06CF18732BC68D0600AB9081 /* app */,
+				AA026B782BC7E85D0081C7F3 /* state */,
+				AA89443F2BC69DCA008F5C78 /* services */,
+				AA89443C2BC69D9F008F5C78 /* models */,
+				06CF18722BC68D0100AB9081 /* utils */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -146,42 +200,18 @@
 			path = res;
 			sourceTree = "<group>";
 		};
-		06CF186B2BC68C8000AB9081 /* ui */ = {
-			isa = PBXGroup;
-			children = (
-				06CF186C2BC68C8C00AB9081 /* scenes */,
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		06CF186C2BC68C8C00AB9081 /* scenes */ = {
-			isa = PBXGroup;
-			children = (
-				06CF186E2BC68CA400AB9081 /* main */,
-			);
-			path = scenes;
-			sourceTree = "<group>";
-		};
 		06CF186E2BC68CA400AB9081 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				06CF186F2BC68CB200AB9081 /* MainSceneView.swift */,
+				06CF18402BC68C4D00AB9081 /* MainTabView.swift */,
 			);
 			path = main;
-			sourceTree = "<group>";
-		};
-		06CF18712BC68CD800AB9081 /* core */ = {
-			isa = PBXGroup;
-			children = (
-				06CF18722BC68D0100AB9081 /* utils */,
-			);
-			path = core;
 			sourceTree = "<group>";
 		};
 		06CF18722BC68D0100AB9081 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				06CF18732BC68D0600AB9081 /* app */,
+				AA026B7B2BC7E9A20081C7F3 /* extensions */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -189,11 +219,92 @@
 		06CF18732BC68D0600AB9081 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				AA026B802BC9312B0081C7F3 /* transactions */,
+				AA89444D2BC6A020008F5C78 /* purchase */,
+				AA8944472BC69F66008F5C78 /* cryptoList */,
+				06CF186E2BC68CA400AB9081 /* main */,
 				06CF183E2BC68C4D00AB9081 /* iOSApp.swift */,
-				06CF18402BC68C4D00AB9081 /* ContentView.swift */,
 				06CF18442BC68C4E00AB9081 /* ios_challenge.entitlements */,
 			);
 			path = app;
+			sourceTree = "<group>";
+		};
+		AA026B782BC7E85D0081C7F3 /* state */ = {
+			isa = PBXGroup;
+			children = (
+				AA026B792BC7E8720081C7F3 /* TransactionsState.swift */,
+			);
+			path = state;
+			sourceTree = "<group>";
+		};
+		AA026B7B2BC7E9A20081C7F3 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AA026B7C2BC7E9BE0081C7F3 /* Combine+Additions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		AA026B802BC9312B0081C7F3 /* transactions */ = {
+			isa = PBXGroup;
+			children = (
+				AA026B812BC9314A0081C7F3 /* TransactionsView.swift */,
+				AA026B832BC931530081C7F3 /* TransactionsViewModel.swift */,
+			);
+			path = transactions;
+			sourceTree = "<group>";
+		};
+		AA026B8E2BC939840081C7F3 /* dependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				AA026B8F2BC939C20081C7F3 /* Container+RegisterDependencies.swift */,
+				AA026B912BC939E10081C7F3 /* Container+Services.swift */,
+				AA026B932BC93A410081C7F3 /* Container+ViewModels.swift */,
+				AA026B952BC93AB20081C7F3 /* Container+States.swift */,
+			);
+			path = dependencyInjection;
+			sourceTree = "<group>";
+		};
+		AA89443C2BC69D9F008F5C78 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				AA89443D2BC69DA9008F5C78 /* Models.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		AA89443F2BC69DCA008F5C78 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				AA8944402BC69DDB008F5C78 /* CoincapService.swift */,
+				AA026B7E2BC7EAD50081C7F3 /* TransactionsService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		AA8944472BC69F66008F5C78 /* cryptoList */ = {
+			isa = PBXGroup;
+			children = (
+				AA8944492BC69F8B008F5C78 /* CryptoListViewModel.swift */,
+				AA89444B2BC69FFC008F5C78 /* CryptoListView.swift */,
+			);
+			path = cryptoList;
+			sourceTree = "<group>";
+		};
+		AA89444D2BC6A020008F5C78 /* purchase */ = {
+			isa = PBXGroup;
+			children = (
+				AA89444E2BC6A02D008F5C78 /* PurchaseViewModel.swift */,
+				AA8944502BC6A038008F5C78 /* PurchaseView.swift */,
+			);
+			path = purchase;
+			sourceTree = "<group>";
+		};
+		AA8944572BC6A386008F5C78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,12 +317,18 @@
 				06CF18372BC68C4D00AB9081 /* Sources */,
 				06CF18382BC68C4D00AB9081 /* Frameworks */,
 				06CF18392BC68C4D00AB9081 /* Resources */,
+				AA89445D2BC6A44D008F5C78 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "ios-challenge";
+			packageProductDependencies = (
+				AA89445A2BC6A44D008F5C78 /* AlamofireDynamic */,
+				AA026B892BC938F20081C7F3 /* Swinject-Dynamic */,
+				AA026B8C2BC939440081C7F3 /* SwinjectAutoregistration-Dynamic */,
+			);
 			productName = "ios-challenge";
 			productReference = 06CF183B2BC68C4D00AB9081 /* ios-challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +401,11 @@
 				Base,
 			);
 			mainGroup = 06CF18322BC68C4D00AB9081;
+			packageReferences = (
+				AA8944522BC6A24D008F5C78 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				AA026B882BC938F20081C7F3 /* XCRemoteSwiftPackageReference "Swinject" */,
+				AA026B8B2BC939440081C7F3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
 			productRefGroup = 06CF183C2BC68C4D00AB9081 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -326,9 +448,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06CF18412BC68C4D00AB9081 /* ContentView.swift in Sources */,
+				AA89444A2BC69F8B008F5C78 /* CryptoListViewModel.swift in Sources */,
+				AA026B962BC93AB20081C7F3 /* Container+States.swift in Sources */,
+				AA89444F2BC6A02D008F5C78 /* PurchaseViewModel.swift in Sources */,
+				AA026B7A2BC7E8720081C7F3 /* TransactionsState.swift in Sources */,
+				AA026B7D2BC7E9BE0081C7F3 /* Combine+Additions.swift in Sources */,
+				AA026B942BC93A410081C7F3 /* Container+ViewModels.swift in Sources */,
+				AA026B922BC939E10081C7F3 /* Container+Services.swift in Sources */,
+				AA89444C2BC69FFC008F5C78 /* CryptoListView.swift in Sources */,
+				AA026B842BC931530081C7F3 /* TransactionsViewModel.swift in Sources */,
+				AA8944512BC6A038008F5C78 /* PurchaseView.swift in Sources */,
+				AA026B822BC9314A0081C7F3 /* TransactionsView.swift in Sources */,
+				06CF18412BC68C4D00AB9081 /* MainTabView.swift in Sources */,
 				06CF183F2BC68C4D00AB9081 /* iOSApp.swift in Sources */,
-				06CF18702BC68CB200AB9081 /* MainSceneView.swift in Sources */,
+				AA8944412BC69DDB008F5C78 /* CoincapService.swift in Sources */,
+				AA026B7F2BC7EAD50081C7F3 /* TransactionsService.swift in Sources */,
+				AA026B902BC939C20081C7F3 /* Container+RegisterDependencies.swift in Sources */,
+				AA89443E2BC69DA9008F5C78 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,10 +620,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "ios-challenge/src/core/utils/app/ios_challenge.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "ios-challenge/src/app/ios_challenge.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ios-challenge/Preview Content\"";
+				DEVELOPMENT_TEAM = 942Z9J99QG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -500,7 +637,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -520,10 +657,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "ios-challenge/src/core/utils/app/ios_challenge.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "ios-challenge/src/app/ios_challenge.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ios-challenge/Preview Content\"";
+				DEVELOPMENT_TEAM = 942Z9J99QG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -536,7 +674,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -559,7 +697,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.orgranization.ios-challengeTests";
@@ -581,7 +719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.orgranization.ios-challengeTests";
@@ -602,7 +740,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.orgranization.ios-challengeUITests";
@@ -623,7 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.orgranization.ios-challengeUITests";
@@ -677,6 +815,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA026B882BC938F20081C7F3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.5;
+			};
+		};
+		AA026B8B2BC939440081C7F3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+		AA8944522BC6A24D008F5C78 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA026B892BC938F20081C7F3 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA026B882BC938F20081C7F3 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+		AA026B8C2BC939440081C7F3 /* SwinjectAutoregistration-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA026B8B2BC939440081C7F3 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = "SwinjectAutoregistration-Dynamic";
+		};
+		AA89445A2BC6A44D008F5C78 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA8944522BC6A24D008F5C78 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 06CF18332BC68C4D00AB9081 /* Project object */;
 }
